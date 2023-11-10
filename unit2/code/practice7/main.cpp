@@ -2,7 +2,8 @@
 
 int factorial(int n)
 {
-    if (n <= 1) return 1;
+    if (n <= 1)
+        return 1;
     int sum = 1;
     for (int i = n; i > 1; i--)
         sum *= i;
@@ -11,8 +12,9 @@ int factorial(int n)
 
 int rFactorial(int n)
 {
-    if (n <= 1) return 1;
-    return n * rFactorial(n-1);
+    if (n <= 1)
+        return 1;
+    return n * rFactorial(n - 1);
 } // S(n) = 8*max{n,1}
 
 int main()
@@ -20,9 +22,12 @@ int main()
     bool ok = true;
 
     int i;
-    for (i = 10; i >= 0 && factorial(i) == rFactorial(i); i--) {}
-    if (i >= 0) ok = false;
+    for (i = 10; i >= 0 && factorial(i) == rFactorial(i); i--)
+    {
+    }
+    if (i >= 0)
+        ok = false;
 
-    std::cout << "i = " << i <<", test " << (ok ? "succeed":"failed") << std::endl;
+    std::cout << "i = " << i << ", test " << (ok ? "succeed" : "failed") << std::endl;
     return 0;
 }
