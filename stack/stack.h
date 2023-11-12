@@ -1,8 +1,9 @@
 #ifndef LEARNSTRUCTURE_STACK_H
 #define LEARNSTRUCTURE_STACK_H
 
-template<typename T>
-class stack {
+template <typename T>
+class stack
+{
 public:
     virtual ~stack() {}
 
@@ -17,4 +18,4 @@ public:
     virtual void push(const T &theElement) = 0;
 };
 
-#endif //LEARNSTRUCTURE_STACK_H
+#endif // LEARNSTRUCTURE_STACK_H
